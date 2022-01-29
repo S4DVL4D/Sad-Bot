@@ -25,7 +25,7 @@ if (result.rows[0] == null) {
         content: `<@!${context.params.event.member.user.id}> : Je ne trouve pas "${search}" 😔`
       });
 } 
-else if (result.rows.length > 5) {
+else if (result.rows.length > 7) {
   await lib.discord.channels['@0.0.6'].messages.create({
     channel_id: context.params.event.channel_id,
     content: `@${context.params.event.member.user.username} : Trop de résultats pour "${search}", veuillez affiner votre recherche.`
